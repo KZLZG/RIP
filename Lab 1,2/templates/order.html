@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Заказ №{{ data.id }}{% endblock %}
+
+{% block content %}
+    <div class="order-text">Информация о заказе №{{ data.id }}</div>
+
+    <p><img src="{% static data.url %}" alt="Здесь картинка"> </img></p>
+    <p>Цена равняется {{ data.id }}000</p>
+{% endblock %}

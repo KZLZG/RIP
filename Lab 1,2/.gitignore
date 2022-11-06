@@ -1,0 +1,13 @@
+# created by virtualenv automatically
+*.log
+/venv
+pyvenv.cfg
+tests.py
+копия СЕТИНГЗ.txt
+db.sqlite3
+/lib
+/Scripts
+migrations
+.idea
+/djangoProject/settings.py
+__pycache__
