@@ -1,0 +1,15 @@
+
+*.log
+.venv
+.idea
+pyvenv.cfg
+db.sqlite3
+/lib
+/Scripts
+migrations
+.idea
+/lab3/settings.py
+*__pycache__
+/lab3/__pycache__
+/rowe/__pycache__
+/rowe/migrations
