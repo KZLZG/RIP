@@ -55,7 +55,7 @@
 											"font": "Arial;13;1",
 											"left": 216,
 											"top": 213,
-											"width": 260.6865234375,
+											"width": 266.38671875,
 											"height": 13,
 											"text": "Товары"
 										},
@@ -81,7 +81,7 @@
 													"font": "Arial;13;0",
 													"left": 221,
 													"top": 236,
-													"width": 250.6865234375,
+													"width": 256.38671875,
 													"height": 13
 												},
 												{
@@ -96,7 +96,7 @@
 													"font": "Arial;13;0",
 													"left": 221,
 													"top": 251,
-													"width": 250.6865234375,
+													"width": 256.38671875,
 													"height": 13
 												},
 												{
@@ -111,7 +111,7 @@
 													"font": "Arial;13;0",
 													"left": 221,
 													"top": 266,
-													"width": 250.6865234375,
+													"width": 256.38671875,
 													"height": 13
 												},
 												{
@@ -126,22 +126,52 @@
 													"font": "Arial;13;0",
 													"left": 221,
 													"top": 281,
-													"width": 250.6865234375,
+													"width": 256.38671875,
+													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGEh0ug2dlUiU0=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK5//TvrH/k="
+													},
+													"model": {
+														"$ref": "AAAAAAGEh0ugwtlRlJs="
+													},
+													"font": "Arial;13;0",
+													"left": 221,
+													"top": 296,
+													"width": 256.38671875,
+													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGEh0yZTdleD94=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK5//TvrH/k="
+													},
+													"model": {
+														"$ref": "AAAAAAGEh0yZPtlbhwc="
+													},
+													"font": "Arial;13;0",
+													"left": 221,
+													"top": 311,
+													"width": 256.38671875,
 													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 216,
 											"top": 231,
-											"width": 260.6865234375,
-											"height": 68
+											"width": 266.38671875,
+											"height": 98
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 216,
 									"top": 208,
-									"width": 260.6865234375,
-									"height": 112,
+									"width": 266.38671875,
+									"height": 153,
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK5//TvqIvo="
 									},
@@ -266,9 +296,9 @@
 											"font": "Arial;13;1",
 											"left": 336,
 											"top": 429,
-											"width": 232,
+											"width": 233.60107421875,
 											"height": 13,
-											"text": "Избранное_пользователей"
+											"text": "Заказ"
 										},
 										{
 											"_type": "ERDColumnCompartmentView",
@@ -292,7 +322,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 452,
-													"width": 222,
+													"width": 223.60107421875,
 													"height": 13
 												},
 												{
@@ -307,7 +337,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 467,
-													"width": 222,
+													"width": 223.60107421875,
 													"height": 13
 												},
 												{
@@ -323,7 +353,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 482,
-													"width": 222,
+													"width": 223.60107421875,
 													"height": 13
 												},
 												{
@@ -338,21 +368,36 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 482,
-													"width": 222,
+													"width": 223.60107421875,
+													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGEh0q4jdlKbec=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK7kADwFsx4="
+													},
+													"model": {
+														"$ref": "AAAAAAGEh0q4ctlH428="
+													},
+													"font": "Arial;13;0",
+													"left": 341,
+													"top": 497,
+													"width": 223.60107421875,
 													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 336,
 											"top": 447,
-											"width": 232,
-											"height": 53
+											"width": 233.60107421875,
+											"height": 68
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 336,
 									"top": 424,
-									"width": 232,
+									"width": 233.60107421875,
 									"height": 168,
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK7kADwEP2c="
@@ -414,7 +459,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 281,
-											"top": 338,
+											"top": 379,
 											"height": 13,
 											"alpha": -0.5235987755982988,
 											"distance": 30,
@@ -431,7 +476,7 @@
 										"$ref": "AAAAAAGEBK7kADwDdkU="
 									},
 									"lineStyle": 2,
-									"points": "336:424;296:424;296:319",
+									"points": "336:424;296:424;296:360",
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK8X0TwTNYk="
 									},
@@ -477,7 +522,7 @@
 												"$ref": "AAAAAAGEBK8ndjwmOvE="
 											},
 											"font": "Arial;13;0",
-											"left": 592,
+											"left": 594,
 											"top": 409,
 											"height": 13,
 											"alpha": 0.5235987755982988,
@@ -512,7 +557,7 @@
 										"$ref": "AAAAAAGEBK7kADwDdkU="
 									},
 									"lineStyle": 2,
-									"points": "567:430;712:430;712:295",
+									"points": "569:430;712:430;712:295",
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK8ndjwnuaE="
 									},
@@ -784,6 +829,25 @@
 									"referenceTo": {
 										"$ref": "AAAAAAGEEz71JUrO0zE="
 									}
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGEh0ugwtlRlJs=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK5/+zvnm18="
+									},
+									"name": "Цена",
+									"type": "DECIMAL",
+									"length": "8, 2"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGEh0yZPtlbhwc=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK5/+zvnm18="
+									},
+									"name": "Сколько в наличии",
+									"type": "INTEGER"
 								}
 							]
 						},
@@ -813,7 +877,7 @@
 									},
 									"name": "логин",
 									"type": "VARCHAR",
-									"length": "32"
+									"length": "50"
 								},
 								{
 									"_type": "ERDColumn",
@@ -823,7 +887,7 @@
 									},
 									"name": "пароль",
 									"type": "VARCHAR",
-									"length": "32"
+									"length": "50"
 								}
 							]
 						},
@@ -833,7 +897,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGEBKoUNDvgg30="
 							},
-							"name": "Избранное_пользователей",
+							"name": "Заказ",
 							"ownedElements": [
 								{
 									"_type": "ERDRelationship",
@@ -938,6 +1002,16 @@
 									"name": "id",
 									"type": "BIGINT",
 									"primaryKey": true
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGEh0q4ctlH428=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK7kADwB13I="
+									},
+									"name": "время создания",
+									"type": "DATETIME",
+									"length": "6"
 								}
 							]
 						},
