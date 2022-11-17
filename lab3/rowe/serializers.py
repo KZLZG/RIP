@@ -7,4 +7,4 @@ class ProductSerializer(serializers.ModelSerializer):
         # Модель, которую мы сериализуем
         model = Product
         # Поля, которые мы сериализуем
-        fields = ["pk", "product_name", "price", "can_be_delivered", "in_stock"]
+        fields = ["pk", "name", "id_fabricant", "description", "in_stock", "price"]

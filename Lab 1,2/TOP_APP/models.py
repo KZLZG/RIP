@@ -24,5 +24,5 @@ class User(models.Model):
     favourites = models.ManyToManyField(Tovar)
 
     class Meta:
-        manged: True
+        managed: True
         db_table = 'users'

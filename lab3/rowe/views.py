@@ -9,5 +9,5 @@ class ProductViewSet(viewsets.ModelViewSet):
     API endpoint, который позволяет просматривать и редактировать акции компаний
     """
     # queryset всех пользователей для фильтрации по названию
-    queryset = Product.objects.all().order_by('product_name')
+    queryset = Product.objects.all().order_by('name')
     serializer_class = ProductSerializer  # Сериализатор для модели
