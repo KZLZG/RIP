@@ -9,7 +9,7 @@ application = get_asgi_application()
 '''REQUESTS TO DB'''
 import django
 django.setup()
-from rowe.models import Product, User, Fabricant
+from rowe.models import Product, User, Fabricant, Order
 
 #############################################
 # Creating a Product record
@@ -64,3 +64,9 @@ user = User.objects.get(name='user')
 user.password = "user"
 user.save()
 ############################################# 
+
+#############################################
+# select all Product records
+all_prods = Product.objects.all()
+# orders_before_2022 = Order.objects.filter(created__lte = '2022-01-01')
+#############################################
