@@ -14,10 +14,10 @@ class Fabricant(models.Model):
 # Класс товара
 class Product(models.Model):
     name = models.CharField(max_length=30)
-    id_fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE)
+    id_fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE, default=1)
     description = models.CharField(max_length=255, default='Описание')
-    in_stock = models.IntegerField(verbose_name="Количество на складе")
-    price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Цена товара")
+    in_stock = models.IntegerField(default=1, verbose_name="Количество на складе")
+    price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Цена товара", default=500)
 
     class Meta:
         managed = True
