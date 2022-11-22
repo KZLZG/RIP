@@ -1,5 +1,6 @@
 import os
-
+import datetime
+import django
 from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab3.settings')
@@ -7,7 +8,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab3.settings')
 application = get_asgi_application()
 
 '''REQUESTS TO DB'''
-import django
+
 django.setup()
 from rowe.models import Product, User, Fabricant, Order
 '''
@@ -68,7 +69,10 @@ user.save()
 #############################################
 # select all Product records
 all_prods = Product.objects.all()'''
-#orders_before_2022 = Order.objects.filter(created__gte='2022-01-01').values()
-orders_before_2022 = Order.objects.all().values()
+
+orders_before_2022 = \
+    Order.objects.filter(created__gte=datetime.datetime(2022, 11, 21, 11, 16, 34, tzinfo=datetime.timezone.utc),
+                         created__lte=datetime.datetime(2022, 11, 30, 00, 00, 00, tzinfo=datetime.timezone.utc)).values()
+# orders_before_2022 = Order.objects.all().values()
 print(orders_before_2022)
 #############################################
