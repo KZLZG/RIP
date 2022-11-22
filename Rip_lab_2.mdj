@@ -296,7 +296,7 @@
 											"font": "Arial;13;1",
 											"left": 336,
 											"top": 429,
-											"width": 233.60107421875,
+											"width": 265.33935546875,
 											"height": 13,
 											"text": "Заказ"
 										},
@@ -322,7 +322,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 452,
-													"width": 223.60107421875,
+													"width": 255.33935546875,
 													"height": 13
 												},
 												{
@@ -337,7 +337,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 467,
-													"width": 223.60107421875,
+													"width": 255.33935546875,
 													"height": 13
 												},
 												{
@@ -353,7 +353,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 482,
-													"width": 223.60107421875,
+													"width": 255.33935546875,
 													"height": 13
 												},
 												{
@@ -368,7 +368,7 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 482,
-													"width": 223.60107421875,
+													"width": 255.33935546875,
 													"height": 13
 												},
 												{
@@ -383,21 +383,51 @@
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 497,
-													"width": 223.60107421875,
+													"width": 255.33935546875,
+													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGEoGwj7EgCWH0=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK7kADwFsx4="
+													},
+													"model": {
+														"$ref": "AAAAAAGEoGwj2Ef/cWs="
+													},
+													"font": "Arial;13;0",
+													"left": 341,
+													"top": 512,
+													"width": 255.33935546875,
+													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGEoG7X7kgLAQQ=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK7kADwFsx4="
+													},
+													"model": {
+														"$ref": "AAAAAAGEoG7X3kgIhKo="
+													},
+													"font": "Arial;13;0",
+													"left": 341,
+													"top": 527,
+													"width": 255.33935546875,
 													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 336,
 											"top": 447,
-											"width": 233.60107421875,
-											"height": 68
+											"width": 265.33935546875,
+											"height": 98
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 336,
 									"top": 424,
-									"width": 233.60107421875,
+									"width": 265.33935546875,
 									"height": 168,
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK7kADwEP2c="
@@ -522,7 +552,7 @@
 												"$ref": "AAAAAAGEBK8ndjwmOvE="
 											},
 											"font": "Arial;13;0",
-											"left": 594,
+											"left": 625,
 											"top": 409,
 											"height": 13,
 											"alpha": 0.5235987755982988,
@@ -557,7 +587,7 @@
 										"$ref": "AAAAAAGEBK7kADwDdkU="
 									},
 									"lineStyle": 2,
-									"points": "569:430;712:430;712:295",
+									"points": "600:430;712:430;712:295",
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK8ndjwnuaE="
 									},
@@ -1012,6 +1042,26 @@
 									"name": "время создания",
 									"type": "DATETIME",
 									"length": "6"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGEoGwj2Ef/cWs=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK7kADwB13I="
+									},
+									"name": "время обновлениия",
+									"type": "DATETIME",
+									"length": "6"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGEoG7X3kgIhKo=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK7kADwB13I="
+									},
+									"name": "статус",
+									"type": "VARCHAR",
+									"length": "16"
 								}
 							]
 						},

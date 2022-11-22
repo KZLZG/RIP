@@ -10,7 +10,7 @@ application = get_asgi_application()
 import django
 django.setup()
 from rowe.models import Product, User, Fabricant, Order
-
+'''
 #############################################
 # Creating a Product record
 p = Product(
@@ -67,6 +67,8 @@ user.save()
 
 #############################################
 # select all Product records
-all_prods = Product.objects.all()
-# orders_before_2022 = Order.objects.filter(created__lte = '2022-01-01')
+all_prods = Product.objects.all()'''
+#orders_before_2022 = Order.objects.filter(created__gte='2022-01-01').values()
+orders_before_2022 = Order.objects.all().values()
+print(orders_before_2022)
 #############################################
