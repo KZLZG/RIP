@@ -1,1 +1,4 @@
-<li><a href="{% url 'tovar_url' elem.id %}">{{ elem.name }}</a></li>
+<li>
+    <a href="{% url 'tovar_url' tovar.id %}">{{ tovar.name }}
+    </a>
+</li>

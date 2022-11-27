@@ -27,5 +27,6 @@ urlpatterns = [
     path('intro/', views.hello, name='hello'),
     path('index/', views.index, name='index'),
     path('2', views.tovarList),
-    path('tovar/<int:id>/', views.GetTovar, name='tovar_url')
+    path('tovar/<int:id>/', views.GetTovar, name='tovar_url'),
+    path('send_delete/<int:id>', views.send_delete, name='send_delete')
 ]

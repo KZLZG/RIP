@@ -6,6 +6,7 @@
 <ul>
     {% for order in data.orders %}
        {% include 'order_element.html' with element=order %}
+
     {% empty %}
         <li>Список пуст</li>
     {% endfor %}
