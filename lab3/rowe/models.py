@@ -1,5 +1,5 @@
 from django.db import models
-
+import json
 
 # Класс производителя товара
 class Fabricant(models.Model):
@@ -42,6 +42,7 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Когда создан")
     updated = models.DateTimeField(auto_now=True, verbose_name="Последнее изменение")
     status = models.CharField(max_length=16, verbose_name="Статус заказа", default='Создан')
+
 
     class Meta:
         managed: True
