@@ -633,7 +633,7 @@
 											"top": 407,
 											"width": 79.44091796875,
 											"height": 13,
-											"text": "Frontend"
+											"text": "Insomnia"
 										},
 										{
 											"_type": "LabelView",
@@ -1532,7 +1532,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Frontend",
+					"name": "Insomnia",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
