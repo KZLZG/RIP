@@ -7,17 +7,25 @@ from django.utils import timezone
 
 
 class OrderViewSet(viewsets.ModelViewSet):
-    # queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
     @action(methods=['get'], detail=False)
     def get_queryset(self):
-        print(self.request.query_params.dict())
-        created = datetime.strptime(self.request.query_params.get('created'), '%Y-%m-%d')
-        print(created)
-        if not created:
-            return Order.objects.all().order_by('created')[:4]
-        return Order.objects.filter(created__day=created.day, created__month=created.month, created__year=created.year)
+        request = self.request.query_params.get('created')
+        if not request:
+            between_beg = self.request.query_params.get('between_beg')
+            between_end = self.request.query_params.get('between_end')
+            if between_beg is None and between_end is None:
+                return Order.objects.all().order_by('created')[:4]
+            else:
+                between_beg = timezone.make_aware(datetime.strptime(between_beg,
+                                                                    '%Y-%m-%d'),  timezone.get_default_timezone())
+                between_end = timezone.make_aware(datetime.strptime(between_end,
+                                                                    '%Y-%m-%d'),  timezone.get_default_timezone())
+                return Order.objects.filter(created__lte=between_end, created__gte=between_beg)
+        else:
+            created = timezone.make_aware(datetime.strptime(request, '%Y-%m-%d'),  timezone.get_default_timezone())
+            return Order.objects.filter(created__day=created.day, created__month=created.month, created__year=created.year)
 
 
 class FabricantViewSet(viewsets.ModelViewSet):
