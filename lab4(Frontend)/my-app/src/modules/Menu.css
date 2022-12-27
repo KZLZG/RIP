@@ -1,0 +1,16 @@
+ul.nav {
+    float: right;
+    list-style: none;
+}
+
+ul.nav li{
+    display: inline;
+    margin-left: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+ul.nav li:hover{
+    opacity: 0.5;
+}

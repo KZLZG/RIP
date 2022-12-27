@@ -1,0 +1,10 @@
+header .presentation {
+    margin: 50px 0;
+
+    width: 100%;
+    background-size: cover;
+}
+header .logo {
+    font-weight: 700;
+    font-size: 40px;
+}

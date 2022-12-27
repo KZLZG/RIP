@@ -9,7 +9,7 @@ from django.utils import timezone
 class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
 
-    @action(methods=['get'], detail=False)
+    #@action(methods=['get'], detail=False)
     def get_queryset(self):
         request = self.request.query_params.get('created')
         if not request:
@@ -46,8 +46,11 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     # queryset всех пользователей для фильтрации по названию
     queryset = Product.objects.all().order_by('name')
+    a = queryset.values()
     serializer_class = ProductSerializer  # Сериализатор для модели
 
+a = ProductViewSet()
+print(a.a)
 
 
 

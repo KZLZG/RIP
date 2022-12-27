@@ -1,5 +1,5 @@
 from django.db import models
-import json
+
 
 # Класс производителя товара
 class Fabricant(models.Model):
@@ -11,13 +11,22 @@ class Fabricant(models.Model):
         db_table = 'fabricants'
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Пароль", default='Масло')
+
+    class Meta:
+        managed = True
+        db_table = 'Categories'
+
+
 # Класс товара
 class Product(models.Model):
-    name = models.CharField(max_length=30)
-    id_fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE, default=1)
-    description = models.CharField(max_length=255, default='Описание')
+    name = models.CharField(max_length=30, verbose_name='Название', default='Масло Машинное')
+    fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE, default=1)
+    description = models.CharField(max_length=255, default='Описание', verbose_name='Описание')
     in_stock = models.IntegerField(default=1, verbose_name="Количество на складе")
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Цена товара", default=500)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 
     class Meta:
         managed = True
@@ -42,7 +51,6 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Когда создан")
     updated = models.DateTimeField(auto_now=True, verbose_name="Последнее изменение")
     status = models.CharField(max_length=16, verbose_name="Статус заказа", default='Создан')
-
 
     class Meta:
         managed: True

@@ -1,4 +1,4 @@
-from rowe.models import Product, Fabricant, Order, User
+from rowe.models import Product, Fabricant, Order, User, Category
 from rest_framework import serializers
 
 
@@ -7,7 +7,7 @@ class ProductSerializer(serializers.ModelSerializer):
         # Модель, которую мы сериализуем
         model = Product
         # Поля, которые мы сериализуем
-        fields = ["pk", "name", "id_fabricant", "description", "in_stock", "price"]
+        fields = ["pk", "name", "fabricant", "description", "in_stock", "price", "category"]
 
 
 class FabricantSerializer(serializers.ModelSerializer):
