@@ -1,21 +1,36 @@
-import {Button, Card} from "react-bootstrap";
+import {Button, Card, Col, Row} from "react-bootstrap";
 import React from "react";
-import  "../jpgs/1.png"
 
-const ProductCard = (data) => {
-    return <Card className="card">
-        <Card.Img className="cardImage" variant="top" src="../jpgs/1.png" height={100} width={100}  />
-        <Card.Body>
-            <div className="textStyle">
-                <Card.Title>{data}</Card.Title>
+const ProductCard = (props) => {
+    /*return(
+        <Col md={3}>
+            <div className="card" style={{width:150, cursor:"pointer"}} border={"dark"}>
+                <img className="card-img-top" src={props.img} alt="Card image cap" style={{resizeMode: "cover", height: 150, width: 150}}/>
+                <div className="card-body">
+                    <h5 className="card-title">{props.name}</h5>
+                    <p className="price">{props.price}</p>
+                    <p className="card-text">
+                        {props.description}
+                    </p>
+                    <p><button>В Корзину</button></p>
+                </div>
             </div>
-            <div  className="textStyle">
+        </Col>
+    )*/
+    return (
+        <Col md={3} className={"mt-3"}>
+        <Card border="primary" style={{ width:150, cursor:"pointer"}}>
+            <Card.Img variant="top" src={props.img} alt="Card image cap" style={{resizeMode: "cover", height: 150, width: 150}} />
+            <Card.Body>
+                <Card.Title>{props.name}</Card.Title>
+                <Card.Subtitle>{props.price}</Card.Subtitle>
                 <Card.Text>
-                    {console.log(data)}
-                    {data.price}
+                    {props.description}
                 </Card.Text>
-            </div>
-        </Card.Body>
-    </Card>
-}
+                <Button variant="primary">В Корзину</Button>
+            </Card.Body>
+        </Card>
+        </Col>
+    );
+};
 export default ProductCard;
