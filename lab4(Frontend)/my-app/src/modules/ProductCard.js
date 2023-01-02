@@ -18,19 +18,17 @@ const ProductCard = (props) => {
         </Col>
     )*/
     return (
-        <Col md={3} className={"mt-3"}>
-        <Card border="primary" style={{ width:150, cursor:"pointer"}}>
-            <Card.Img variant="top" src={props.img} alt="Card image cap" style={{resizeMode: "cover", height: 150, width: 150}} />
+        <Card>
+            <Card.Img variant="top" src={props.model.img} alt="Card image cap" style={{resizeMode: "cover", height: 150, width: 150}} />
             <Card.Body>
-                <Card.Title>{props.name}</Card.Title>
-                <Card.Subtitle>{props.price}</Card.Subtitle>
+                <Card.Title>{props.model.name}</Card.Title>
+                <Card.Subtitle>{props.model.price}</Card.Subtitle>
                 <Card.Text>
-                    {props.description}
+                    {props.model.description}
                 </Card.Text>
                 <Button variant="primary">В Корзину</Button>
             </Card.Body>
         </Card>
-        </Col>
     );
 };
 export default ProductCard;

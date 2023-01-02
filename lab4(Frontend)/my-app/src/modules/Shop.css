@@ -1,0 +1,10 @@
+.cards-wrapper{
+    display: grid;
+    grid-template-columns: 28vw 28vw 28vw;
+    gap: 3vw;
+    align-items:center;
+    width: 90vw;
+}
+.centerAllign {
+    display: flex;
+}

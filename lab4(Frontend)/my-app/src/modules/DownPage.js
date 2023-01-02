@@ -1,9 +1,10 @@
 import React from "react";
+import "./DownPage.css"
 
 export default function DownPage() {
     return(
-        <footer>
+        <div className="footer">
             All rights reserved &copy;
-        </footer>
+        </div>
     )
 }
