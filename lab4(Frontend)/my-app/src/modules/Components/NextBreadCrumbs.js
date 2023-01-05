@@ -11,13 +11,18 @@ import {useLocation} from "react-router";
         return (
         <Box m={2}>
             <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" href="/">
+                <Link underline="hover" href="/">
                     Shop
                 </Link>
                 {pathnames.map((name, index) =>{
-                    const routeTo = '/' + pathnames.slice(0, index+1).join("/");
-                    let returnLink = <Link href={routeTo}>{name}</Link>;
-                    return returnLink;
+                    const routeTo = '/' + pathnames.slice(0, index).join("/");
+                    if(index == pathnames.length-1){
+                        return <Typography key={routeTo}>{name}</Typography>
+                    }
+                    else{
+                        let returnLink = <Link key={routeTo} href={routeTo}>{name}</Link>;
+                        return returnLink;
+                    }
                     })}
             </Breadcrumbs>
         </Box>
