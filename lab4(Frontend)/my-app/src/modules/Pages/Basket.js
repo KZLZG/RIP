@@ -4,7 +4,6 @@ const Basket = () => {
     return (
         <div>
             Basket page
-            {console.log("basket")}
         </div>
     );
 };
