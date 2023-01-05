@@ -8,6 +8,8 @@ router.register(r'rowe', rowe_views.ProductViewSet)
 router.register(r'user', rowe_views.UserViewSet)
 router.register(r'order', rowe_views.OrderViewSet, basename='order')
 router.register(r'fabricant', rowe_views.FabricantViewSet)
+router.register(r'categories', rowe_views.CategoryViewSet)
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

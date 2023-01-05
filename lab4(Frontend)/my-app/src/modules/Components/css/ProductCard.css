@@ -1,0 +1,26 @@
+.card-img-top{
+    position: relative;
+}
+.card{
+    cursor: pointer;
+    box-shadow: #39404B;
+    transition: all .3s;
+}
+.card:hover{
+
+}
+.price{
+    color: #E34D38;
+    display: block;
+    overflow: visible;
+}
+.card-title{
+    color: #39404B;
+    margin: 0;
+    text-transform: uppercase;
+}
+.card-text{
+    color: #39404B;
+    margin: 0;
+    text-transform: lowercase;
+}

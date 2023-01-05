@@ -21,12 +21,13 @@ class Category(models.Model):
 
 # Класс товара
 class Product(models.Model):
-    name = models.CharField(max_length=30, verbose_name='Название', default='Масло Машинное')
+    name = models.CharField(max_length=100, verbose_name='Название', default='Масло Машинное')
     fabricant = models.ForeignKey(Fabricant, on_delete=models.CASCADE, default=1)
     description = models.CharField(max_length=255, default='Описание', verbose_name='Описание')
     in_stock = models.IntegerField(default=1, verbose_name="Количество на складе")
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Цена товара", default=500)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+    img = models.CharField(max_length=256, verbose_name="Картинка", default="https://top-oil67.ru/wp-content/uploads/2020/03/ROWE_Neu_weiss-768x516.jpg")
 
     class Meta:
         managed = True

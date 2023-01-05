@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from rowe.serializers import ProductSerializer, FabricantSerializer, UserSerializer, OrderSerializer
-from rowe.models import Product, Order, User, Fabricant
+from rowe.serializers import ProductSerializer, FabricantSerializer, UserSerializer, OrderSerializer, CategorySerializer
+from rowe.models import Product, Order, User, Fabricant, Category
 from rest_framework.decorators import action
 from datetime import datetime
 from django.utils import timezone
@@ -9,7 +9,7 @@ from django.utils import timezone
 class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
 
-    #@action(methods=['get'], detail=False)
+    # @action(methods=['get'], detail=False)
     def get_queryset(self):
         request = self.request.query_params.get('created')
         if not request:
@@ -49,9 +49,16 @@ class ProductViewSet(viewsets.ModelViewSet):
     a = queryset.values()
     serializer_class = ProductSerializer  # Сериализатор для модели
 
-a = ProductViewSet()
-print(a.a)
 
+class CategoryViewSet(viewsets.ModelViewSet):
+
+    # queryset всех пользователей для фильтрации по названию
+    queryset = Category.objects.all().order_by('name')
+    a = queryset.values()
+    serializer_class = CategorySerializer
+
+# a = ProductViewSet()
+# print(a.a)
 
 
 '''REQUESTS TO DB'''
@@ -121,4 +128,3 @@ orders_before_2022 = \
 # orders_before_2022 = Order.objects.all().values()
 print(orders_before_2022)'''
 #############################################
-

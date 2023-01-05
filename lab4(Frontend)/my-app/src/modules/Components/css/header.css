@@ -1,0 +1,17 @@
+header .presentation {
+    margin: 50px 0;
+    width: 100%;
+    background: aliceblue;
+}
+header .logo {
+    font-weight: 700;
+    font-size: 60px;
+    font-family: Roboto;
+    color: #c10a46;
+}
+.header-box{
+    width: 100%;
+}
+body{
+    background: aliceblue;
+}

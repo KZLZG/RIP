@@ -7,7 +7,7 @@ class ProductSerializer(serializers.ModelSerializer):
         # Модель, которую мы сериализуем
         model = Product
         # Поля, которые мы сериализуем
-        fields = ["pk", "name", "fabricant", "description", "in_stock", "price", "category"]
+        fields = ["pk", "name", "fabricant", "description", "in_stock", "price", "category", "img"]
 
 
 class FabricantSerializer(serializers.ModelSerializer):
@@ -34,3 +34,9 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = ["pk", "users", "products", "created", "updated", "status"]
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        # Модель, которую мы сериализуем
+        model = Category
+        # Поля, которые мы сериализуем
+        fields = ["pk", "name"]

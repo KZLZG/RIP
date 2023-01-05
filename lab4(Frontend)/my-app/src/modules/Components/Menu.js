@@ -1,9 +1,9 @@
 import React from "react";
-import './Menu.css'
+import './css/Menu.css'
 
 export default function Menu(){
     return(
-        <div>
+        <div className="Menu">
             <ul className='nav'>
                 <li>Кабинет</li>
                 <li>Контакты</li>
