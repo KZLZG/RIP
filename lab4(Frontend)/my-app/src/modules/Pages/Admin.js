@@ -1,11 +1,13 @@
 import React from 'react';
+import {Button, Container} from "@mui/material";
 
 const Admin = () => {
     return (
-        <div>
-            Admin Page
-            {console.log("admin")}
-        </div>
+        <Container maxWidth="sm">
+            <Button>Добавить Товар</Button>
+            <Button>Добавить Категорию</Button>
+            <Button>Добавить Поставщика</Button>
+        </Container>
     );
 };
 

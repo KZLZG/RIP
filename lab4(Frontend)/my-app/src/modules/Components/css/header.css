@@ -1,9 +1,14 @@
-header .presentation {
+.presentation {
     margin: 50px 0;
     width: 100%;
-    background: aliceblue;
+    background-color: aliceblue;
+    background-size: cover;
+
 }
-header .logo {
+Header{
+    position: relative;
+}
+.logo {
     font-weight: 700;
     font-size: 60px;
     font-family: Roboto;
@@ -12,6 +17,28 @@ header .logo {
 .header-box{
     width: 100%;
 }
-body{
-    background: aliceblue;
+.Header{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.shop-cart-button{
+float: right;
+    cursor: pointer;
+    transition:color 500ms ease;
+}
+.shop-cart-button.active{
+    color:#dc3d3d;
+}
+.shop-cart-button:hover{
+color: #dc3d3d;
+}
+.shop-cart{
+    position: absolute;
+    top: 10vw;
+    right: 5vw;
+    width: 30vw;
+    min-height: 20vw;
+    background: white;
+    box-shadow: 4px 5px 15px -7px #606060;
 }

@@ -1,9 +1,14 @@
-import {Button, Card, Col, Row} from "react-bootstrap";
 import React from "react";
 import "./css/ProductCard.css"
+import Typography from "@mui/material/Typography";
+import {Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton} from "@mui/material";
+
+function MoreVertIcon() {
+    return null;
+}
 
 const ProductCard = (props) => {
-    return(
+    return(/*}
             <div className="card">
                 <img className="card-img-top" src={props.model.img} alt="Card image cap"/>
                 <div className="card-body">
@@ -15,19 +20,29 @@ const ProductCard = (props) => {
                     <p><button className="store">В Корзину</button></p>
                 </div>
             </div>
-    )/*
-    return (
-        <Card>
-            <Card.Img variant="top" src={props.model.img} alt="Card image" style={{resizeMode: "cover", height: 150, width: 150}} />
-            <Card.Body>
-                <Card.Title>{props.model.name}</Card.Title>
-                <Card.Subtitle>{props.model.price}</Card.Subtitle>
-                <Card.Text>
+    )*/
+        <Card sx={{ minWidth: 250 }}>
+            <CardMedia
+                component="img"
+                height="300"
+                image={props.model.img}
+                alt="Товар"
+            />
+            <CardContent>
+                <Typography variant="h5" component="div">
+                    {props.model.name}
+                </Typography>
+                <Typography sx={{ fontSize: 18 }} color="text.primary   " gutterBottom>
+                    {props.model.price}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     {props.model.description}
-                </Card.Text>
-                <Button variant="primary">В Корзину</Button>
-            </Card.Body>
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small">В корзину</Button>
+            </CardActions>
         </Card>
-    );*/
+    );
 };
 export default ProductCard;

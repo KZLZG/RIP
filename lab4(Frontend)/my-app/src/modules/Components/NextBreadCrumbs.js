@@ -11,7 +11,7 @@ import {useLocation} from "react-router";
         return (
         <Box m={2}>
             <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" href="/">
+                <Link href="/">
                     Shop
                 </Link>
                 {pathnames.map((name, index) =>{
