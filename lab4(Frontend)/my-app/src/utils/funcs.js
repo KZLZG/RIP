@@ -1,0 +1,1 @@
+export const calcTotalPrice = models => models.reduce((acc, model) => (acc += Number(model.price)), 0)

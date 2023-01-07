@@ -2,12 +2,18 @@ import React from "react";
 import "./css/ProductCard.css"
 import Typography from "@mui/material/Typography";
 import {Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton} from "@mui/material";
+import {useDispatch} from "react-redux";
+import {setCartItem} from "../../redux/cart/cart.reducer";
 
-function MoreVertIcon() {
-    return null;
-}
 
 const ProductCard = (props) => {
+    const dispatch = useDispatch();
+
+    function handleClick(e) {
+        e.stopPropagation();
+        dispatch(setCartItem(props.model));
+    }
+
     return(/*}
             <div className="card">
                 <img className="card-img-top" src={props.model.img} alt="Card image cap"/>
@@ -21,9 +27,11 @@ const ProductCard = (props) => {
                 </div>
             </div>
     )*/
-        <Card sx={{ minWidth: 250 }}>
+        <Card sx={{ minWidth: 180 }}>
             <CardMedia
                 component="img"
+                sx={{ display: "flex", marginLeft: "auto",
+                    marginRight: "auto", maxWidth: 150 }}
                 height="300"
                 image={props.model.img}
                 alt="Товар"
@@ -40,7 +48,7 @@ const ProductCard = (props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">В корзину</Button>
+                <Button size="small" type="primary" onClick={handleClick}>В корзину</Button>
             </CardActions>
         </Card>
     );

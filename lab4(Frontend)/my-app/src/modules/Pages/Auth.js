@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Card, Link, Container, FormControl, InputLabel, Input} from "@mui/material";
-import {LOGIN_ROUTE, REGISTRATION_ROUTE} from "../consts";
+import {LOGIN_ROUTE, REGISTRATION_ROUTE} from "../../utils/consts";
 import {useLocation} from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
