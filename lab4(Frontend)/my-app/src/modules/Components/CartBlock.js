@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import {calcTotalPrice} from "../../utils/funcs";
 import ItemsInCart from "./ItemsInCart";
 
+//Блок для хедера, в котором: Картинка(кнопка) корзины и Строка стоимости товаров в корзине
 const CartBlock = () => {
 
     let [cartOpen, setCartOpen] = useState(false);

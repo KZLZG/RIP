@@ -3,14 +3,16 @@
     grid-template-columns: 28vw 28vw 28vw;
     gap: 3vw;
     align-items:center;
-    width: 90vw;
+    width: 85vw;
     background: whitesmoke;
+
 }
 .centerAllign {
     display: flex;
 }
 .bar-div{
     background: #3f4e54;
+
 }
 
 .bar-text-move{

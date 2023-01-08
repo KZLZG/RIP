@@ -2,6 +2,7 @@ import React from 'react';
 import {calcTotalPrice} from "../../utils/funcs";
 import {Button} from "@mui/material";
 import {BASKET_ROUTE} from "../../utils/consts";
+import CartItem from "./CartItem";
 
 //Раскрывающееся поле Корзины с товарами в ней
 const CartBox = (models) => {
@@ -12,7 +13,7 @@ const CartBox = (models) => {
                 <ul>
                     {
                         models.models.map(model =>
-                            <li key={model.key}>{model.name}</li>)
+                            <CartItem key={model.pk} model={model}/>)
                     }
                 </ul>
             </div>
