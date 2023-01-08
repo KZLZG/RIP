@@ -2,26 +2,22 @@ import React from "react";
 import "./css/ProductCard.css"
 import Typography from "@mui/material/Typography";
 import {Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton} from "@mui/material";
-import {useDispatch, useSelector} from "react-redux";
-import {deleteCartItem, setCartItem} from "../../redux/cart/cart.reducer";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router";
+import {setCurrentProduct} from "../../redux/product/reducer";
+import ButtonInCart from "./ButtonInCart";
 
 
 const ProductCard = (props) => {
     const dispatch = useDispatch();
-    const items = useSelector(state => state.cart.cartItems);
-    const isItemInCart = items.some(item => item.pk === props.model.pk);
+    const navigate = useNavigate();
 
-    function handleClick(e) {
-        e.stopPropagation();
-        if(isItemInCart){
-            dispatch(deleteCartItem(props.model.pk))
-        }else{
-            dispatch(setCartItem(props.model));
-        }
+    function clickOnCard(){
+        dispatch(setCurrentProduct(props.model));
+        navigate('/product/' + props.model.pk)
     }
-
     return(
-        <Card sx={{ minWidth: 180 }}>
+        <Card sx={{ minWidth: 180 }} onClick={clickOnCard}>
             <CardMedia
                 component="img"
                 sx={{ display: "flex", marginLeft: "auto",
@@ -42,10 +38,7 @@ const ProductCard = (props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" type={isItemInCart ? "secondary" : "primary"}
-                        onClick={handleClick}
-                    >{isItemInCart ? 'Убрать из корзины' : 'В корзину'}
-                </Button>
+                <ButtonInCart model={props.model}/>
             </CardActions>
         </Card>
     );

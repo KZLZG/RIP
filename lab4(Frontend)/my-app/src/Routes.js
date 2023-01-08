@@ -22,7 +22,7 @@ export const publicRoutes = [
         Element: <Shop/>
     },
     {
-        path: PRODUCT_ROUTE + "/:id",
+        path: PRODUCT_ROUTE + ":id",
         Element: <ProductPage/>
     },
     {
