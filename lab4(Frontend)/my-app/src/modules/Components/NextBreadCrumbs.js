@@ -9,7 +9,7 @@ import {useLocation} from "react-router";
         const location = useLocation();
         const pathnames = location.pathname.split('/').filter((x) => x);
         return (
-        <Box m={2}>
+        <Box>
             <Breadcrumbs aria-label="breadcrumb">
                 <Link href="/">
                     Shop

@@ -1,7 +1,6 @@
 ul.nav {
     float: right;
     list-style: none;
-    color: #39404B;
     font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -18,6 +17,8 @@ ul.nav li{
 ul.nav li:hover{
     opacity: 0.5;
 }
-.menu{
-
+.Menu{
+    position: absolute;
+    top: 0;
+    right: 0 ;
 }

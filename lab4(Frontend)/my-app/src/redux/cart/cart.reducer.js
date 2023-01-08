@@ -12,7 +12,7 @@
              state.cartItems.push(action.payload);
          },
          deleteCartItem: (state, action) =>{
-             state.cartItems = state.cartItems.filter(item =>item.id !== action.payload)
+             state.cartItems = state.cartItems.filter(model => Number(model.pk) !== action.payload)
          },
          clearAllItems(state) {
              state.cartItems = [];
@@ -20,6 +20,5 @@
      },
  });
 
- export const selectAllItems = (state) => state.cartItems;
  export const { setCartItem, deleteCartItem, clearAllItems} = cartSlice.actions;
  export default cartSlice.reducer;

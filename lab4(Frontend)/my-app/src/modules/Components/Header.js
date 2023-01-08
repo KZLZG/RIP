@@ -1,31 +1,19 @@
 import React, {useState} from "react";
-import './css/header.css'
+import './css/Header.css'
 import Menu from "./Menu";
 import {FaShoppingCart} from "react-icons/fa"
 import {AppBar, Box, Button, IconButton, Toolbar} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {useSelector} from "react-redux";
-import CartElement from "./CartElement";
-import {calcTotalPrice} from "../../utils/funcs";
+import CartBlock from "./CartBlock";
 
 export default function Header() {
-    let [cartOpen, setCartOpen] = useState(false);
-    const models = useSelector(state => state.cart.cartItems);
-    const totalPrice = calcTotalPrice(models)
     return (
         <header className='Header'>
-            <div>
+            <div className="header-box">
                 <span className='logo'>Avalon</span>
+                <CartBlock/>
                 <Menu/>
-                <div className="cart-block">
-                    <FaShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={cartOpen ? 'shop-cart-button active' : 'shop-cart-button'}/>
-                    {cartOpen && (
-                        <CartElement models={models}/>
-                    )}
-                    <span className="total-price">price: {totalPrice}руб.</span>
-                </div>
             </div>
-            <div className='presentation'></div>
         </header>
 
     )
