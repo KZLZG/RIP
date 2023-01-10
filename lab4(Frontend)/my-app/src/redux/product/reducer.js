@@ -11,8 +11,11 @@ import {createSlice} from "@reduxjs/toolkit";
          setCurrentProduct: (state, action) =>{
              state.currentProduct = action.payload;
          },
+         clearCurrentProduct(state) {
+             state.allProducts = null;
+         },
      },
  });
 
- export const { setCurrentProduct } = productSlice.actions;
+ export const { setCurrentProduct, clearCurrentProduct } = productSlice.actions;
 export default productSlice.reducer;

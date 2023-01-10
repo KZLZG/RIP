@@ -1,35 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import ProductCard from "./ProductCard";
 import CategBar from "./CategBar";
-import InputField from "./InputField";
+import {useSelector} from "react-redux";
 
  function CardsList() {
-     const [models, setModels] = useState([]);
-     const [searchValue, setSearchValue] = useState('');
-     const [found, setMusic] = useState([])
-
-     const handleSearch = async () => {
-         await setMusic(models.filter(item => item.name === ""));
-     }
-
+/*
      useEffect(() => {
          fetch('http://127.0.0.1:8000/rowe/')
              .then(response => response.json())
 
              .then(data => {
-                 setModels(data);
-
+                 dispatch(setallProducts(data));
              })
      }, [])
-
-    return (
+*/
+     const models = useSelector(state => state.allProducts.allProducts);
+     //const currentCategories = useSelector(state => state.categories.currentCategories);
+     //const currentModels = models.filter(model => model.category.);
+     //console.log(currentCategories.values(), "aboba", currentModels);
+     return (
         <div className='centerAllign'>
             <div className="bar-div">
                 <CategBar/>
             </div>
             <div className="cards">
                 <div className="cards-wrapper">
-                    {models.map((found) =>
+                    {models.map(found =>
                         <ProductCard key={found.pk} model={found}/>)}
                 </div>
             </div>
