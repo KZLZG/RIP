@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import './css/Header.css'
+import '../css/Header.css'
 import Menu from "./Menu";
 import {FaShoppingCart} from "react-icons/fa"
 import {AppBar, Box, Button, IconButton, Toolbar} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import CartBlock from "./CartBlock";
+import CartBlock from "../cart/CartBlock";
 
 export default function Header() {
     return (

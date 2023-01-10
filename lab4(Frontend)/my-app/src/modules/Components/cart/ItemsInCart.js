@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/ItemsInCart.css"
+import "../css/ItemsInCart.css"
 
 //Кружок количества товаров в корзине
 const ItemsInCart = (quantity=0) => {

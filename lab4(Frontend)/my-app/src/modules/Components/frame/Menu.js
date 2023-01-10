@@ -1,6 +1,6 @@
 import React from "react";
-import './css/Menu.css'
-import {LOGIN_ROUTE} from "../../utils/consts";
+import '../css/Menu.css'
+import {LOGIN_ROUTE} from "../../../utils/consts";
 import {Button} from "@mui/material";
 
 export default function Menu(){

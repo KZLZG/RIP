@@ -2,9 +2,9 @@ import React from 'react';
 import {Button, Card, Link, Container, FormControl, InputLabel, Input} from "@mui/material";
 import {LOGIN_ROUTE, REGISTRATION_ROUTE} from "../../utils/consts";
 import {useLocation} from "react-router-dom";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import NextBreadCrumbs from "../Components/NextBreadCrumbs";
+import Header from "../Components/frame/Header";
+import Footer from "../Components/frame/Footer";
+import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
 import {Row} from "react-bootstrap";
 
 const Auth = () => {

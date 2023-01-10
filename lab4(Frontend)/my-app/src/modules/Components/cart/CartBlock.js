@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaShoppingCart} from "react-icons/fa";
 import CartBox from "./CartBox";
 import {useSelector} from "react-redux";
-import {calcTotalPrice} from "../../utils/funcs";
+import {calcTotalPrice} from "../../../utils/funcs";
 import ItemsInCart from "./ItemsInCart";
 
 //Блок для хедера, в котором: Картинка(кнопка) корзины и Строка стоимости товаров в корзине

@@ -1,16 +1,15 @@
 import React from 'react';
-import NextBreadCrumbs from "../Components/NextBreadCrumbs";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
+import Header from "../Components/frame/Header";
+import Footer from "../Components/frame/Footer";
+import Order from "../Components/Order"
 
 const Basket = () => {
     return (
         <div>
             <Header/>
             <NextBreadCrumbs />
-            <div>
-                Basket page
-            </div>
+            <Order/>
             <Footer/>
         </div>
     );

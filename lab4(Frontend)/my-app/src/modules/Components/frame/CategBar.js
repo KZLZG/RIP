@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ListGroup} from "react-bootstrap";
-import "./css/CardsList.css"
+import "../css/CardsList.css"
 import {useDispatch, useSelector} from "react-redux";
-import {clearCurrentCategories, setCurrentCategories} from "../../redux/categories/reducer";
+import {clearCurrentCategories, setAllCategories, setCurrentCategories} from "../../../redux/categories/reducer";
 
 const CategBar = () => {
     const dispatch = useDispatch();
-    /*
+
         useEffect(() => {
             fetch('http://127.0.0.1:8000/categories/')
                 .then(response => response.json())
@@ -16,7 +16,7 @@ const CategBar = () => {
                     dispatch(setCurrentCategories(data));
                 })
         }, [dispatch]);
-    */
+
     const categories = useSelector(state => state.categories.allCategories);
     return (
             <div className="bar-text-move">

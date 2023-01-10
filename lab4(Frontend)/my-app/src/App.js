@@ -12,31 +12,30 @@ import {setAllCategories, setCurrentCategories} from "./redux/categories/reducer
 function App() {
     const dispatch = useDispatch();
     const isAuth = true;
-
-    const GetProds = useCallback(() => {
-        fetch('http://127.0.0.1:8000/rowe/')
-            .then(response => response.json())
-            .then(data => {
-                //console.log(data);
-                dispatch(setallProducts(data));
-        })
-    }, [dispatch])
-    const GetCategs = useCallback(() => {
-        fetch('http://127.0.0.1:8000/categories/')
-            .then(response => response.json())
-            .then(data => {
-                //console.log(data);
-                dispatch(setAllCategories(data));
-                dispatch(setCurrentCategories(data));
+    /*
+        const GetProds = useCallback(() => {
+            fetch('http://127.0.0.1:8000/rowe/')
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    dispatch(setallProducts(data));
             })
-    }, [dispatch]);
+        }, [dispatch])
+        const GetCategs = useCallback(() => {
+            fetch('http://127.0.0.1:8000/categories/')
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    dispatch(setAllCategories(data));
+                    dispatch(setCurrentCategories(data));
+                })
+        }, [dispatch]);
 
-    useEffect(() => {
-        GetProds();
-        GetCategs();
-    }, []);
+        useEffect(() => {
+            GetProds();
+            GetCategs();
+        }, []);*/
     return (
-        <>
             <Router>
                 <Routes>
                         <Route index element={<Shop />}/>
@@ -48,7 +47,6 @@ function App() {
                         )}
                 </Routes>
             </Router>
-        </>
     );
 };
 

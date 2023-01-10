@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import CardsList from "../Components/CardsList";
+import Footer from "../Components/frame/Footer";
+import Header from "../Components/frame/Header";
+import CardsList from "../Components/products/CardsList";
 import "./css/Shop.css";
-import NextBreadCrumbs from "../Components/NextBreadCrumbs";
+import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
 import {Box} from "@mui/material";
 
 

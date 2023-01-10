@@ -1,11 +1,11 @@
 import React from "react";
-import "./css/ProductCard.css"
+import "../css/ProductCard.css"
 import Typography from "@mui/material/Typography";
 import {Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router";
-import {setCurrentProduct} from "../../redux/product/reducer";
-import ButtonInCart from "./ButtonInCart";
+import {setCurrentProduct} from "../../../redux/product/reducer";
+import ButtonInCart from "../cart/ButtonInCart";
 
 
 const ProductCard = (props) => {
@@ -30,7 +30,7 @@ const ProductCard = (props) => {
                 <Typography variant="h5" component="div">
                     {props.model.name}
                 </Typography>
-                <Typography sx={{ fontSize: 18 }} color="text.primary   " gutterBottom>
+                <Typography sx={{ fontSize: 18 }} color="text.primary" gutterBottom>
                     {props.model.price}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
