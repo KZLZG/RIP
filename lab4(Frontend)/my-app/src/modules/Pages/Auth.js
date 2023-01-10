@@ -6,9 +6,11 @@ import Header from "../Components/frame/Header";
 import Footer from "../Components/frame/Footer";
 import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
 import {Row} from "react-bootstrap";
+import {useNavigate} from "react-router";
 
 const Auth = () => {
     const isLogin = useLocation().pathname === LOGIN_ROUTE;
+    const navigate = useNavigate();
     return (
         <Container className="justify-content-center">
             <Header/>
@@ -58,10 +60,10 @@ const Auth = () => {
                 <Row>
                 {isLogin ?
                     <div>
-                        <Link href={REGISTRATION_ROUTE}> Зарегистрироваться</Link>
+                        <Link onClick={() => navigate(REGISTRATION_ROUTE)}> Зарегистрироваться</Link>
                     </div>
                     :
-                    <Button href={LOGIN_ROUTE}>
+                    <Button onClick={() => navigate(LOGIN_ROUTE)}>
                         Eсть аккаунт - войти"
                     </Button>
                 }

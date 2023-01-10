@@ -3,15 +3,16 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import {Box} from "@mui/material";
-import {useLocation} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 
     function NextBreadCrumbs(){
         const location = useLocation();
+        const navigate = useNavigate();
         const pathnames = location.pathname.split('/').filter((x) => x);
         return (
         <Box>
             <Breadcrumbs aria-label="breadcrumb">
-                <Link href="/">
+                <Link onClick={() => navigate("/")}>
                     Shop
                 </Link>
                 {pathnames.map((name, index) =>{
@@ -20,7 +21,7 @@ import {useLocation} from "react-router";
                         return <Typography key={routeTo}>{name}</Typography>
                     }
                     else{
-                        let returnLink = <Link key={routeTo} href={routeTo}>{name}</Link>;
+                        let returnLink = <Link key={routeTo} onClick={() => navigate(routeTo)}>{name}</Link>;
                         return returnLink;
                     }
                     })}
