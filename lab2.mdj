@@ -158,13 +158,28 @@
 													"top": 311,
 													"width": 256.38671875,
 													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGFtwMM1JjOcQU=",
+													"_parent": {
+														"$ref": "AAAAAAGEBK5//TvrH/k="
+													},
+													"model": {
+														"$ref": "AAAAAAGFtwMMwZjLb5s="
+													},
+													"font": "Arial;13;0",
+													"left": 221,
+													"top": 326,
+													"width": 256.38671875,
+													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 216,
 											"top": 231,
 											"width": 266.38671875,
-											"height": 98
+											"height": 113
 										}
 									],
 									"font": "Arial;13;0",
@@ -329,7 +344,7 @@
 									"left": 608,
 									"top": 152,
 									"width": 216,
-									"height": 144,
+									"height": 193,
 									"nameLabel": {
 										"$ref": "AAAAAAGEBK62ojv3GSA="
 									},
@@ -455,6 +470,7 @@
 													"model": {
 														"$ref": "AAAAAAGEoGwj2Ef/cWs="
 													},
+													"visible": false,
 													"font": "Arial;13;0",
 													"left": 341,
 													"top": 512,
@@ -472,7 +488,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 341,
-													"top": 527,
+													"top": 512,
 													"width": 255.33935546875,
 													"height": 13
 												}
@@ -481,7 +497,7 @@
 											"left": 336,
 											"top": 447,
 											"width": 265.33935546875,
-											"height": 98
+											"height": 83
 										}
 									],
 									"font": "Arial;13;0",
@@ -517,7 +533,7 @@
 											"top": 13,
 											"width": 206.09033203125,
 											"height": 13,
-											"text": "Производители"
+											"text": "Категории"
 										},
 										{
 											"_type": "ERDColumnCompartmentView",
@@ -568,6 +584,7 @@
 													"model": {
 														"$ref": "AAAAAAGEE0CUiErcZ5w="
 													},
+													"visible": false,
 													"font": "Arial;13;0",
 													"left": 205,
 													"top": 66,
@@ -579,7 +596,7 @@
 											"left": 200,
 											"top": 31,
 											"width": 206.09033203125,
-											"height": 53
+											"height": 38
 										}
 									],
 									"font": "Arial;13;0",
@@ -711,7 +728,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 667,
-											"top": 314,
+											"top": 363,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 30,
@@ -745,7 +762,7 @@
 										"$ref": "AAAAAAGEBK62ojv2VS4="
 									},
 									"lineStyle": 2,
-									"points": "652:295;652:424;600:424",
+									"points": "652:344;652:424;600:424",
 									"nameLabel": {
 										"$ref": "AAAAAAGFDIafwXBnpZc="
 									},
@@ -951,7 +968,7 @@
 									},
 									"name": "Название",
 									"type": "VARCHAR",
-									"length": "30"
+									"length": "100"
 								},
 								{
 									"_type": "ERDColumn",
@@ -969,7 +986,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGEBK5/+zvnm18="
 									},
-									"name": "id_производителя",
+									"name": "id_категории",
 									"type": "BIGINT",
 									"foreignKey": true,
 									"referenceTo": {
@@ -983,8 +1000,7 @@
 										"$ref": "AAAAAAGEBK5/+zvnm18="
 									},
 									"name": "Цена",
-									"type": "DECIMAL",
-									"length": "8, 2"
+									"type": "DOUBLE"
 								},
 								{
 									"_type": "ERDColumn",
@@ -994,6 +1010,16 @@
 									},
 									"name": "Сколько в наличии",
 									"type": "INTEGER"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGFtwMMwZjLb5s=",
+									"_parent": {
+										"$ref": "AAAAAAGEBK5/+zvnm18="
+									},
+									"name": "Фото",
+									"type": "VARCHAR",
+									"length": "100"
 								}
 							]
 						},
@@ -1098,7 +1124,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGEBK62ojv0/Sw="
 									},
-									"name": "должность",
+									"name": "суперюзер",
 									"type": "VARCHAR",
 									"length": "32"
 								},
@@ -1108,7 +1134,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGEBK62ojv0/Sw="
 									},
-									"name": "ник",
+									"name": "фамилия",
 									"type": "VARCHAR",
 									"length": "64"
 								},
@@ -1128,9 +1154,9 @@
 									"_parent": {
 										"$ref": "AAAAAAGEBK62ojv0/Sw="
 									},
-									"name": "фамилия",
+									"name": "почта",
 									"type": "VARCHAR",
-									"length": "32"
+									"length": "254"
 								}
 							]
 						},
@@ -1273,8 +1299,8 @@
 										"$ref": "AAAAAAGEBK7kADwB13I="
 									},
 									"name": "статус",
-									"type": "VARCHAR",
-									"length": "16"
+									"type": "LONGTEXT",
+									"length": 0
 								}
 							]
 						},
@@ -1284,7 +1310,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGEBKoUNDvgg30="
 							},
-							"name": "Производители",
+							"name": "Категории",
 							"ownedElements": [
 								{
 									"_type": "ERDRelationship",
@@ -1334,7 +1360,7 @@
 									},
 									"name": "название",
 									"type": "VARCHAR",
-									"length": "50"
+									"length": "30"
 								},
 								{
 									"_type": "ERDColumn",
