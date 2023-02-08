@@ -20,7 +20,7 @@ import {setallProducts} from "../../../redux/allproducts/reducer";
      //const currentModels = models.filter(model => model.category.);
      //console.log(currentCategories.values(), "aboba", currentModels);
      return (
-        <div className='centerAllign'>
+       /* <div className='centerAllign'>
             <div className="bar-div">
                 <CategBar/>
             </div>
@@ -30,7 +30,18 @@ import {setallProducts} from "../../../redux/allproducts/reducer";
                         <ProductCard key={found.pk} model={found}/>)}
                 </div>
             </div>
-        </div>
+        </div>*/
+         <div className='centerAllign'>
+             <div className="bar-div">
+                 <CategBar/>
+             </div>
+             <div className="container-fluid">
+                 <div className="cards-wrapper">
+                     {models.map(found =>
+                         <ProductCard key={found.pk} model={found}/>)}
+                 </div>
+             </div>
+         </div>
     );
  }
 export default CardsList;
