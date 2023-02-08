@@ -1,9 +1,9 @@
 import React from 'react';
-import {Button, Container} from "@mui/material";
+import {Button, Container} from "react-bootstrap";
 
 const Admin = () => {
     return (
-        <Container maxWidth="sm">
+        <Container>
             <Button>Добавить Товар</Button>
             <Button>Добавить Категорию</Button>
             <Button>Добавить Поставщика</Button>

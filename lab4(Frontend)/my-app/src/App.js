@@ -6,7 +6,7 @@ import Shop from "./modules/Pages/Shop";
 import {useDispatch} from "react-redux";
 import {setallProducts} from "./redux/allproducts/reducer";
 import {setAllCategories, setCurrentCategories} from "./redux/categories/reducer";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Компонент маршрутизации приложения
 
 function App() {

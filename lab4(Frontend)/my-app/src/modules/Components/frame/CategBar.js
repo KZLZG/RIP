@@ -21,7 +21,9 @@ const CategBar = () => {
     return (
             <div className="bar-text-move">
                 <ListGroup className="bar-text">
-                    <span onClick={() => dispatch(clearCurrentCategories())}>Все товары</span>
+                    <ListGroup.Item key="clear">
+                    <span onClick={dispatch(clearCurrentCategories())}>Все товары</span>
+                    </ListGroup.Item>
                     {categories.map((category) =>
                         <ListGroup.Item key={category.pk}>
                             <span onClick={() => dispatch(setCurrentCategories(category))}>{category.name}</span>

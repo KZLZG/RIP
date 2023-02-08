@@ -4,17 +4,16 @@ import Header from "../Components/frame/Header";
 import CardsList from "../Components/products/CardsList";
 import "./css/Shop.css";
 import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
-import {Box} from "@mui/material";
 
 
 export default function Shop() {
 
     return(
-        <Box>
+        <div className="container-fluid">
             <Header/>
             <NextBreadCrumbs />
             <CardsList/>
             <Footer/>
-        </Box>
+        </div>
     )
 }
