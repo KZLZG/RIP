@@ -35,7 +35,6 @@ function App() {
             GetProds();
             GetCategs();
         }, []);*/
-    console.log("REEEEERENDER");
     return (
             <Router>
                 <Routes>

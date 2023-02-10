@@ -1,11 +1,10 @@
 import React from 'react';
-import {Button, Card, Link, Container, FormControl, InputLabel, Input} from "@mui/material";
 import {LOGIN_ROUTE, REGISTRATION_ROUTE} from "../../utils/consts";
 import {useLocation} from "react-router-dom";
 import Header from "../Components/frame/Header";
 import Footer from "../Components/frame/Footer";
 import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
-import {Row} from "react-bootstrap";
+import {Button, Container, Form, Row} from "react-bootstrap";
 import {useNavigate} from "react-router";
 
 const Auth = () => {
@@ -16,7 +15,7 @@ const Auth = () => {
             <Header/>
             <NextBreadCrumbs/>
             <Container>
-                {/*<Form>
+                <Form>
                     <h2>{isLogin ? "Авторизация" : "Регистрация"}</h2>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
@@ -29,48 +28,21 @@ const Auth = () => {
                     <Row>
                         {isLogin ?
                         <div>
-                            <Link to={REGISTRATION_ROUTE}> Зарегистрироваться</Link>
+                            <Button>Войти</Button>
+                            <Button onClick={() => navigate(REGISTRATION_ROUTE)}>
+                                Зарегистрироваться
+                            </Button>
                         </div>
                             :
-                            <Button href={LOGIN_ROUTE}>
-                                Eсть аккаунт - войти"
-                            </Button>
+                            <div>
+                                <Button>Создать аккаунт</Button>
+                                <Button onClick={() => navigate(LOGIN_ROUTE)}>
+                                    Eсть аккаунт - войти"
+                                </Button>
+                            </div>
                         }
-                        <Button>
-                            {isLogin ? "Войти" : "Зарегистрироваться"}
-                        </Button>
                     </Row>
-                </Form>*/}
-                <FormControl variant="standard">
-                    <InputLabel htmlFor="component-helper">Логин</InputLabel>
-                    <Input
-                        id="component-helper"
-                        defaultValue="admin"
-                        aria-describedby="component-helper-text"
-                    />
-                </FormControl>
-                <FormControl variant="standard">
-                    <InputLabel htmlFor="component-helper">Пароль</InputLabel>
-                    <Input
-                        id="component-helper"
-                        defaultValue="admin"
-                        aria-describedby="component-helper-text"
-                    />
-                </FormControl>
-                <Row>
-                {isLogin ?
-                    <div>
-                        <Link onClick={() => navigate(REGISTRATION_ROUTE)}> Зарегистрироваться</Link>
-                    </div>
-                    :
-                    <Button onClick={() => navigate(LOGIN_ROUTE)}>
-                        Eсть аккаунт - войти"
-                    </Button>
-                }
-                <Button>
-                    {isLogin ? "Войти" : "Зарегистрироваться"}
-                </Button>
-                </Row>
+                </Form>
             </Container>
             <Footer/>
         </Container>
