@@ -1,9 +1,8 @@
 import React from 'react';
-import {Col, Image, Row} from "react-bootstrap";
+import {Col, Container, Image, Row} from "react-bootstrap";
 import Footer from "../Components/frame/Footer";
 import Header from "../Components/frame/Header";
 import NextBreadCrumbs from "../Components/frame/NextBreadCrumbs";
-import {Box, Container} from "@mui/material";
 import {useSelector} from "react-redux";
 import ButtonInCart from "../Components/cart/ButtonInCart";
 
@@ -17,20 +16,19 @@ const ProductPage = () => {
         <Container className='prop-page-container'>
             <Header/>
             <NextBreadCrumbs />
-            <Box md={6}>
-                <Image src={product.img}/>
-            </Box>
-            <Box>
-                <Row>
-                    <h2>{product.name}</h2>
+            <h2>{product.name}</h2>
+            <Row>
+                <Col xs={6} md={4}>
+                    <Image src={product.img} responsive/>
+                </Col>
+                <Col xs={6} md={4}>
                     <ButtonInCart model={product}/>
                     <p>{product.description}</p>
                     <b>{product.price}</b>
                     <p>Количество на складе: {product.in_stock}</p>
                     <div className="add-to-busket" onClick={() => console.log("added")}/>
-
-                </Row>
-            </Box>
+                </Col>
+            </Row>
             <Footer/>
         </Container>
     );
