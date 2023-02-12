@@ -22,11 +22,10 @@ const ProductPage = () => {
                     <Image src={product.img} responsive/>
                 </Col>
                 <Col xs={6} md={4}>
-                    <ButtonInCart model={product}/>
-                    <p>{product.description}</p>
                     <b>{product.price}</b>
+                    <div><ButtonInCart model={product}/></div>
+                    <p>{product.description}</p>
                     <p>Количество на складе: {product.in_stock}</p>
-                    <div className="add-to-busket" onClick={() => console.log("added")}/>
                 </Col>
             </Row>
             <Footer/>

@@ -1,18 +1,18 @@
 .cards-wrapper{
     display: grid;
-    grid-template-columns: 28vw 28vw 28vw;
+    grid-template-columns: 25vw 25vw 25vw;
     gap: 3vw;
-    align-items:center;
-    width: 85vw;
-    background: whitesmoke;
-
 }
+
+.cards-container{
+    background: whitesmoke;
+}
+
 .centerAllign {
     display: flex;
 }
 .bar-div{
     background: #3f4e54;
-
 }
 
 .bar-text-move{

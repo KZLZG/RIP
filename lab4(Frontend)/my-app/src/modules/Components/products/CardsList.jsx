@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard";
 import CategBar from "../frame/CategBar";
 import {useDispatch, useSelector} from "react-redux";
 import {setallProducts} from "../../../redux/allproducts/reducer";
+import {Container} from "react-bootstrap";
 
  function CardsList() {
      const dispatch = useDispatch();
@@ -16,31 +17,17 @@ import {setallProducts} from "../../../redux/allproducts/reducer";
      }, [])
 
      const models = useSelector(state => state.allProducts.allProducts);
-     const currentCategories = useSelector(state => state.categories.currentCategories);
-     //const currentModels = models.filter(model => model.category.);
-     //console.log(currentCategories.values(), "aboba", currentModels);
      return (
-       /* <div className='centerAllign'>
-            <div className="bar-div">
-                <CategBar/>
-            </div>
-            <div className="cards">
-                <div className="cards-wrapper">
-                    {models.map(found =>
-                        <ProductCard key={found.pk} model={found}/>)}
-                </div>
-            </div>
-        </div>*/
          <div className='centerAllign'>
              <div className="bar-div">
                  <CategBar/>
              </div>
-             <div className="container-fluid">
+             <Container fluid={true} className="cards-container">
                  <div className="cards-wrapper">
                      {models.map(found =>
                          <ProductCard key={found.pk} model={found}/>)}
                  </div>
-             </div>
+             </Container>
          </div>
     );
  }

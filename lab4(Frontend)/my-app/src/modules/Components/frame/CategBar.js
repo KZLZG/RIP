@@ -6,27 +6,33 @@ import {clearCurrentCategories, setAllCategories, setCurrentCategories} from "..
 
 const CategBar = () => {
     const dispatch = useDispatch();
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/categories/')
+            .then(response => response.json())
 
-        useEffect(() => {
-            fetch('http://127.0.0.1:8000/categories/')
-                .then(response => response.json())
-
-                .then(data => {
-                    dispatch(setAllCategories(data));
-                    dispatch(setCurrentCategories(data));
-                })
-        }, [dispatch]);
+            .then(data => {
+                dispatch(setAllCategories(data));
+                dispatch(setCurrentCategories(data));
+            })
+    }, [dispatch]);
 
     const categories = useSelector(state => state.categories.allCategories);
+    const clearCategories = () => {
+        dispatch(clearCurrentCategories());
+    };
+    const setCategory = () => {
+        dispatch(setCurrentCategories(category));
+    };
+
     return (
             <div className="bar-text-move">
                 <ListGroup className="bar-text">
                     <ListGroup.Item key="clear">
-                    <span onClick={dispatch(clearCurrentCategories())}>Все товары</span>
+                    <span onClick={clearCategories}>Все товары</span>
                     </ListGroup.Item>
                     {categories.map((category) =>
                         <ListGroup.Item key={category.pk}>
-                            <span onClick={() => dispatch(setCurrentCategories(category))}>{category.name}</span>
+                            <span onClick={setCategory}>{category.name}</span>
                         </ListGroup.Item>)}
                 </ListGroup>
             </div>
