@@ -6,6 +6,7 @@ import {clearCurrentCategories, setAllCategories, setCurrentCategories} from "..
 
 const CategBar = () => {
     const dispatch = useDispatch();
+    /*
     useEffect(() => {
         fetch('http://127.0.0.1:8000/categories/')
             .then(response => response.json())
@@ -15,14 +16,13 @@ const CategBar = () => {
                 dispatch(setCurrentCategories(data));
             })
     }, [dispatch]);
+*/
 
     const categories = useSelector(state => state.categories.allCategories);
     const clearCategories = () => {
         dispatch(clearCurrentCategories());
     };
-    const setCategory = (category) => {
-        dispatch(setCurrentCategories(category));
-    };
+
 
     return (
             <div className="bar-text-move">
@@ -32,7 +32,7 @@ const CategBar = () => {
                     </ListGroup.Item>
                     {categories.map((category) =>
                         <ListGroup.Item key={category.pk}>
-                            <span >{category.name}</span>
+                            <span onClick={() => dispatch(setCurrentCategories(category))}>{category.name}</span>
                         </ListGroup.Item>)}
                 </ListGroup>
             </div>

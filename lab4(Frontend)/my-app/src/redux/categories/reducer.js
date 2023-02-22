@@ -1,7 +1,28 @@
 import {createSlice} from "@reduxjs/toolkit";
 
  const initialState = {
-     allCategories: [],
+     allCategories: [
+         {
+             "pk": 3,
+             "name": "Автохимия"
+         },
+         {
+             "pk": 4,
+             "name": "Гидравлическое масло"
+         },
+         {
+             "pk": 1,
+             "name": "Моторные масла"
+         },
+         {
+             "pk": 2,
+             "name": "Охлаждающие жидкости"
+         },
+         {
+             "pk": 5,
+             "name": "Тормозные жидкости"
+         }
+     ],
      currentCategories: [],
  }
 

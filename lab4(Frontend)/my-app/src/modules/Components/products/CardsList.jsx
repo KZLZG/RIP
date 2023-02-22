@@ -7,14 +7,14 @@ import {Container} from "react-bootstrap";
 
  function CardsList() {
      const dispatch = useDispatch();
-     useEffect(() => {
+     /*useEffect(() => {
          fetch('http://127.0.0.1:8000/rowe/')
              .then(response => response.json())
 
              .then(data => {
                  dispatch(setallProducts(data));
              })
-     }, [])
+     }, [])*/
 
      const models = useSelector(state => state.allProducts.allProducts);
      return (
