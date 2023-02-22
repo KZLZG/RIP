@@ -15,7 +15,7 @@ import {useLocation, useNavigate} from "react-router";
                             return <li class="breadcrumb-item" key={routeTo}>{name}</li>
                         }
                         else{
-                            let returnLink = <li class="breadcrumb-item" key={routeTo} onClick={() => navigate(routeTo)}>{name}</li>;
+                            let returnLink = <li className="breadcrumb-item" key={routeTo} onClick={() => navigate(routeTo)}>{name}</li>;
                             return returnLink;
                         }
                     })}

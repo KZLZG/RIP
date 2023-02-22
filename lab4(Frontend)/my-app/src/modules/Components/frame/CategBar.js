@@ -20,7 +20,7 @@ const CategBar = () => {
     const clearCategories = () => {
         dispatch(clearCurrentCategories());
     };
-    const setCategory = () => {
+    const setCategory = (category) => {
         dispatch(setCurrentCategories(category));
     };
 
@@ -32,7 +32,7 @@ const CategBar = () => {
                     </ListGroup.Item>
                     {categories.map((category) =>
                         <ListGroup.Item key={category.pk}>
-                            <span onClick={setCategory}>{category.name}</span>
+                            <span >{category.name}</span>
                         </ListGroup.Item>)}
                 </ListGroup>
             </div>
